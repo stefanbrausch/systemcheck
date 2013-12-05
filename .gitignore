@@ -1,0 +1,10 @@
+ target/
+ work/
+
+.classpath
+
+.project
+
+.settings/org.eclipse.jdt.core.prefs
+
+src/main/java/org/jenkinsci/plugins/ypintegration/Secrets.java
