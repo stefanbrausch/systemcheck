@@ -124,6 +124,16 @@ public class SystemCheckRootAction implements UnprotectedRootAction {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
+        
+        // Queue length check
+        d = new Date();
+        int queueLength = Hudson.getInstance().getQueue().getBuildableItems().size();
+        list.add(new CheckDetails("WaitingJobsForFreeExecutor", queueLength == 0 ? "OK" : "WARNING", d.toString(),
+                queueLength + " Jobs are waiting for a free executor"));
+        if (queueLength == 0)
+            oks++;
+        else
+            warnings++;
 
         return true;
     }

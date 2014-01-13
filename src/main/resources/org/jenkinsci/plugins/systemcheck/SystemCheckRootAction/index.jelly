@@ -4,6 +4,6 @@
   
  Summary: ${it.getSummary()} -- OK: ${it.getOks()}, WARNING: ${it.getWarnings()}, FAILURE: ${it.getFailures()}, UNKOWN: ${it.getUnkowns()}
  <j:forEach items="${it.getDetails()}" var="detail">
- ${detail.getName()}: ${detail.getState()} --  [${detail.getDate()}]  ${detail.getDescription()} &#10;
+ ${detail.getName()}: ${detail.getState()} --  [${detail.getDate()}]  ${detail.getDescription()} <br/>
  </j:forEach>
 </j:jelly>
